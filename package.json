@@ -1,0 +1,19 @@
+{
+  "name": "html",
+  "version": "1.0.0",
+  "description": "ncaa-bracket ============",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rprendergast180/MaineMadness.git"
+  },
+  "author": "Ryan Prendergast",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rprendergast180/MaineMadness/issues"
+  },
+  "homepage": "https://github.com/rprendergast180/MaineMadness#readme"
+}
