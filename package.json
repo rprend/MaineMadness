@@ -1,10 +1,10 @@
 {
   "name": "html",
   "version": "1.0.0",
-  "description": "ncaa-bracket ============",
+  "description": "Maine Madness: 2018 NCAA Bracket for Maine South High School",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
   "repository": {
     "type": "git",
