@@ -248,7 +248,7 @@ nav li {
   display: inline-block;
   padding: 10px;
 }
-nav a {
+nav a, {
   color: #fff;
   font-family: 'Poppins';
   font-size: 1.5em;
