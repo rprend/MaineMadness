@@ -53,7 +53,7 @@ $(document).ready(function(){
     }
 
     function encodeData() {
-      
+
     }
 
     function showData() {
