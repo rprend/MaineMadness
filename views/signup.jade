@@ -1,0 +1,24 @@
+
+extends layout
+
+block content
+	nav
+		#menuToggle
+			ul
+				li
+					a(href='/') Home
+			.hamburger-menu
+
+
+	include account
+	include modals/alert
+	footer(style='background: transparent; margin-top: 80px;')
+		p Website by Ryan Prendergast &copy 2018
+
+block scripts
+	script(src='/vendor/jquery-2.2.3.min.js')
+	script(src='/vendor/jquery.form.min.js')
+	script(src='/vendor/bootstrap.min.js')
+	script(src='/js/views/signup.js')
+	script(src='/js/controllers/signupController.js')
+	script(src='/js/form-validators/accountValidator.js')

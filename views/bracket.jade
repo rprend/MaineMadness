@@ -1,0 +1,268 @@
+doctype html
+html(lang='en')
+  head
+    title 2018 NCAA March Madness Bracket - Maine Madness
+    meta(name='description', content='Maine Madness - 2018 NCAA March Madness Bracket')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(charset='UTF-8')
+    meta(http-equiv='Content-Language', content='en')
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js')
+    script(src='js/miso.ds.deps.min.0.4.1.js')
+    link(href='css/bracket.css', rel='stylesheet')
+  body
+    nav
+      #menuToggle
+        ul
+          li
+            a(href='bracket') Your Bracket
+          li
+            a(href='/home') Account
+          li
+            a#btn-logout(href='/') Logout
+    #thetitle
+      p
+        | 2018 NCAA
+        br
+        |  Tournament Bracket
+      p#printbtn Save Bracket
+    #r1.rlabel
+    #r2.rlabel
+    #r3.rlabel
+    #r4.rlabel
+    #col1
+      #c1s1.slot(data-col='1', data-game='1')
+      #c1s2.slot(data-col='1', data-game='1')
+      hr(align='left')
+      #c1s3.slot(data-col='1', data-game='2')
+      #c1s4.slot(data-col='1', data-game='2')
+      hr(align='left')
+      #c1s5.slot(data-col='1', data-game='3')
+      #c1s6.slot(data-col='1', data-game='3')
+      hr(align='left')
+      #c1s7.slot(data-col='1', data-game='4')
+      #c1s8.slot(data-col='1', data-game='4')
+      hr(align='left')
+      #c1s9.slot(data-col='1', data-game='5')
+      #c1s10.slot(data-col='1', data-game='5')
+      hr(align='left')
+      #c1s11.slot(data-col='1', data-game='6')
+      #c1s12.slot(data-col='1', data-game='6')
+      hr(align='left')
+      #c1s13.slot(data-col='1', data-game='7')
+      #c1s14.slot(data-col='1', data-game='7')
+      hr(align='left')
+      #c1s15.slot(data-col='1', data-game='8')
+      #c1s16.slot(data-col='1', data-game='8')
+      .spacer15
+      #c1s17.slot(data-col='1', data-game='9')
+      #c1s18.slot(data-col='1', data-game='9')
+      hr(align='left')
+      #c1s19.slot(data-col='1', data-game='10')
+      #c1s20.slot(data-col='1', data-game='10')
+      hr(align='left')
+      #c1s21.slot(data-col='1', data-game='11')
+      #c1s22.slot(data-col='1', data-game='11')
+      hr(align='left')
+      #c1s23.slot(data-col='1', data-game='12')
+      #c1s24.slot(data-col='1', data-game='12')
+      hr(align='left')
+      #c1s25.slot(data-col='1', data-game='13')
+      #c1s26.slot(data-col='1', data-game='13')
+      hr(align='left')
+      #c1s27.slot(data-col='1', data-game='14')
+      #c1s28.slot(data-col='1', data-game='14')
+      hr(align='left')
+      #c1s29.slot(data-col='1', data-game='15')
+      #c1s30.slot(data-col='1', data-game='15')
+      hr(align='left')
+      #c1s31.slot(data-col='1', data-game='16')
+      #c1s32.slot(data-col='1', data-game='16')
+    // ROUND OF 32
+    #col2
+      .vliner
+        #c2s1.slot.c2(data-col='2', data-game='1')
+        #c2s2.slot.c2(data-col='2', data-game='1')
+      .vliner
+        #c2s3.slot.c2(data-col='2', data-game='2')
+        #c2s4.slot.c2(data-col='2', data-game='2')
+      .vliner
+        #c2s5.slot.c2(data-col='2', data-game='3')
+        #c2s6.slot.c2(data-col='2', data-game='3')
+      .vliner
+        #c2s7.slot.c2(data-col='2', data-game='4')
+        #c2s8.slot.c2(data-col='2', data-game='4')
+      .spacer2
+      .vliner
+        #c2s9.slot.c2(data-col='2', data-game='5')
+        #c2s10.slot.c2(data-col='2', data-game='5')
+      .vliner
+        #c2s11.slot.c2(data-col='2', data-game='6')
+        #c2s12.slot.c2(data-col='2', data-game='6')
+      .vliner
+        #c2s13.slot.c2(data-col='2', data-game='7')
+        #c2s14.slot.c2(data-col='2', data-game='7')
+      .vliner
+        #c2s15.slot.c2(data-col='2', data-game='8')
+        #c2s16.slot.c2(data-col='2', data-game='8')
+    #col3
+      .vliner
+        #c3s1.slot.c3(data-col='3', data-game='1')
+        #c3s2.slot.c3(data-col='3', data-game='1')
+      .vliner
+        #c3s3.slot.c3(data-col='3', data-game='2')
+        #c3s4.slot.c3(data-col='3', data-game='2')
+      .vliner
+        #c3s5.slot.c3b(data-col='3', data-game='3')
+        #c3s6.slot.c3b(data-col='3', data-game='3')
+      .vliner
+        #c3s7.slot.c3b(data-col='3', data-game='4')
+        #c3s8.slot.c3b(data-col='3', data-game='4')
+    #col4
+      .vliner
+        #c4s1.slot.c4(data-col='4', data-game='1')
+        #c4s2.slot.c4(data-col='4', data-game='1')
+      .spacer15
+      .vliner
+        #c4s3.slot.c4(data-col='4', data-game='2')
+        #c4s4.slot.c4(data-col='4', data-game='2')
+    #col5
+      .vliner
+        #c5s1.slot.c5(data-col='5', data-game='1')
+        .spacer180
+        #c5s2.slot.c5(data-col='5', data-game='1')
+    #col6
+      #c6s1.slot.c6(data-col='6', data-game='1')
+      #c6s0.slot.c6.winner(data-col='6', data-game='0')
+      #c6s2.slot.c6(data-col='6', data-game='2')
+    #col7
+      .vlinel
+        #c7s1.slot.c7(data-col='7', data-game='2')
+        .spacer180
+        #c7s2.slot.c7(data-col='7', data-game='2')
+    #col8
+      .vlinel
+        #c8s1.slot.c8(data-col='8', data-game='1')
+        #c8s2.slot.c8(data-col='8', data-game='1')
+      .spacer15
+      .vlinel
+        #c8s3.slot.c8(data-col='8', data-game='2')
+        #c8s4.slot.c8(data-col='8', data-game='2')
+    #col9
+      .vlinel
+        #c9s1.slot.c9(data-col='9', data-game='1')
+        #c9s2.slot.c9(data-col='9', data-game='1')
+      .vlinel
+        #c9s3.slot.c9(data-col='9', data-game='2')
+        #c9s4.slot.c9(data-col='9', data-game='2')
+      .vlinel
+        #c9s5.slot.c9b(data-col='9', data-game='3')
+        #c9s6.slot.c9b(data-col='9', data-game='3')
+      .vlinel
+        #c9s7.slot.c9b(data-col='9', data-game='4')
+        #c9s8.slot.c9b(data-col='9', data-game='4')
+    #col10
+      .vlinel
+        #c10s1.slot.c10(data-col='10', data-game='1')
+        #c10s2.slot.c10(data-col='10', data-game='1')
+      .vlinel
+        #c10s3.slot.c10(data-col='10', data-game='2')
+        #c10s4.slot.c10(data-col='10', data-game='2')
+      .vlinel
+        #c10s5.slot.c10(data-col='10', data-game='3')
+        #c10s6.slot.c10(data-col='10', data-game='3')
+      .vlinel
+        #c10s7.slot.c10(data-col='10', data-game='4')
+        #c10s8.slot.c10(data-col='10', data-game='4')
+      .spacer2
+      .vlinel
+        #c10s9.slot.c10(data-col='10', data-game='5')
+        #c10s10.slot.c10(data-col='10', data-game='5')
+      .vlinel
+        #c10s11.slot.c10(data-col='10', data-game='6')
+        #c10s12.slot.c10(data-col='10', data-game='6')
+      .vlinel
+        #c10s13.slot.c10(data-col='10', data-game='7')
+        #c10s14.slot.c10(data-col='10', data-game='7')
+      .vlinel
+        #c10s15.slot.c10(data-col='10', data-game='8')
+        #c10s16.slot.c10(data-col='10', data-game='8')
+    #col11
+      #c11s1.slot(data-col='11', data-game='1')
+      #c11s2.slot(data-col='11', data-game='1')
+      hr(align='left')
+      #c11s3.slot(data-col='11', data-game='2')
+      #c11s4.slot(data-col='11', data-game='2')
+      hr(align='left')
+      #c11s5.slot(data-col='11', data-game='3')
+      #c11s6.slot(data-col='11', data-game='3')
+      hr(align='left')
+      #c11s7.slot(data-col='11', data-game='4')
+      #c11s8.slot(data-col='11', data-game='4')
+      hr(align='left')
+      #c11s9.slot(data-col='11', data-game='5')
+      #c11s10.slot(data-col='11', data-game='5')
+      hr(align='left')
+      #c11s11.slot(data-col='11', data-game='6')
+      #c11s12.slot(data-col='11', data-game='6')
+      hr(align='left')
+      #c11s13.slot(data-col='11', data-game='7')
+      #c11s14.slot(data-col='11', data-game='7')
+      hr(align='left')
+      #c11s15.slot(data-col='11', data-game='8')
+      #c11s16.slot(data-col='11', data-game='8')
+      .spacer15
+      #c11s17.slot(data-col='11', data-game='9')
+      #c11s18.slot(data-col='11', data-game='9')
+      hr(align='left')
+      #c11s19.slot(data-col='11', data-game='10')
+      #c11s20.slot(data-col='11', data-game='10')
+      hr(align='left')
+      #c11s21.slot(data-col='11', data-game='11')
+      #c11s22.slot(data-col='11', data-game='11')
+      hr(align='left')
+      #c11s23.slot(data-col='11', data-game='12')
+      #c11s24.slot(data-col='11', data-game='12')
+      hr(align='left')
+      #c11s25.slot(data-col='11', data-game='13')
+      #c11s26.slot(data-col='11', data-game='13')
+      hr(align='left')
+      #c11s27.slot(data-col='11', data-game='14')
+      #c11s28.slot(data-col='11', data-game='14')
+      hr(align='left')
+      #c11s29.slot(data-col='11', data-game='15')
+      #c11s30.slot(data-col='11', data-game='15')
+      hr(align='left')
+      #c11s31.slot(data-col='11', data-game='16')
+      #c11s32.slot(data-col='11', data-game='16')
+    div(style='clear:both')
+    #firstfour
+      p.title The First Four
+      .ffmodule(style='margin-left: 50px')
+        p#fflabel1.subtitle
+        .ffcol1
+          #c12s1.slotnohover(data-col='12', data-game='1')
+          #c12s2.slotnohover(data-col='12', data-game='1')
+        .ffcol2
+          #c12s9.slotnohover
+      .ffmodule
+        p#fflabel2.subtitle
+        .ffcol1
+          #c12s3.slotnohover(data-col='13', data-game='2')
+          #c12s4.slotnohover(data-col='13', data-game='2')
+        .ffcol2
+          #c12s10.slotnohover
+      .ffmodule
+        p#fflabel3.subtitle
+        .ffcol1
+          #c12s5.slotnohover(data-col='14', data-game='3')
+          #c12s6.slotnohover(data-col='14', data-game='3')
+        .ffcol2
+          #c12s11.slotnohover
+      .ffmodule(style='border-right: none')
+        p#fflabel4.subtitle
+        .ffcol1
+          #c12s7.slotnohover(data-col='15', data-game='4')
+          #c12s8.slotnohover(data-col='15', data-game='4')
+        .ffcol2
+          #c12s12.slotnohover
+    script(src='js/bracket.js')

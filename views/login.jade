@@ -1,0 +1,54 @@
+extends layout
+
+block content
+	link(href='https://fonts.googleapis.com/css?family=Poppins', rel='stylesheet')
+	nav
+		#menuToggle
+			ul
+				li
+					a(href='/') Home
+			.hamburger-menu
+
+	#login.center-vertical(data-aos='fade-up')
+
+		form.well(id='form-login', method='post')
+			h2 Hello!
+			h6 Please Login To Your Account
+			.form-group
+				label Email
+				input.form-control(type='text', id='user-tf', name='user')
+			.form-group
+				label Password
+				input.form-control(type='password', id='pass-tf', name='pass')
+			.controls
+				button(type='button').btn.btn-default.button-rememember-me
+					span.glyphicon.glyphicon-unchecked.button-rememember-me-glyph
+					| Remember Me
+				button(type='submit').btn.btn-primary.button-sign-in
+					span.glyphicon.glyphicon-lock
+					| Sign In
+			.clearfix
+			hr
+			.btm-links
+				#forgot-password
+					a(href='#') Forgot Your Password?
+				#create-account
+					a(href='/signup') Create An Account
+			.clearfix
+	footer(style='background: transparent; margin-top: 80px;')
+		p Website by Ryan Prendergast &copy 2018
+
+	include modals/alert
+	include modals/lost-password
+
+
+block scripts
+	script(src='/vendor/jquery-2.2.3.min.js')
+	script(src='/vendor/jquery.form.min.js')
+	script(src='/vendor/bootstrap.min.js')
+	script(src='/js/views/login.js')
+	script(src='/js/controllers/loginController.js')
+	script(src='/js/form-validators/loginValidator.js')
+	script(src='/js/form-validators/emailValidator.js')
+	script(src='/lib/aos/dist/aos.js')
+	script(src='/lib/animate.css/animate.min.js')

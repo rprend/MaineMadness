@@ -13,7 +13,7 @@ $(document).ready(function(){
       ds = new Miso.Dataset({
           importer : Miso.Dataset.Importers.GoogleSpreadsheet,
           parser : Miso.Dataset.Parsers.GoogleSpreadsheet,
-          key : "0Ain7zrCBNzCIdElJU0s3TW40VElQdU1oZzVDZnJlU0E",
+          key : "1zaxB_wH60g9nQg5tqBEUhA2SSakSwt7bzBzpapPs7pM",
           worksheet : which
       });
 
@@ -44,13 +44,16 @@ $(document).ready(function(){
       }
       //console.log(allData);
 
-      //if (sheetCount < 6) {
       if (sheetCount < 5) {
         sheetCount ++;
         loadData(sheetCount);
       } else {
         showData();
       }
+    }
+
+    function encodeData() {
+      
     }
 
     function showData() {

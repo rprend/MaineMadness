@@ -160,7 +160,7 @@ nav a:hover {
 }
 #intro {
   /*background-image: url("/img/background.png");*/
-  background-image: url('/img/op/workshop1.jpg');
+  background-image: linear-gradient(rgba(219,101,93,0.8), rgba(219,101,93,0.8)), url('/img/cafe-bw.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -234,15 +234,8 @@ nav a:hover {
   width: 80%;
   margin-left: 10%;
 }
-#schedule .copy {
-  padding: 40px 0 0 0;
-  line-height: 3em;
-  text-align: justify;
-  width: 80%;
-  margin-left: 10%;
-}
 
-#about, #faq {
+#about {
   background-image: url("/img/paper.png");
 }
 .signup-container {
@@ -280,42 +273,6 @@ nav a:hover {
   text-transform: uppercase;
   text-align: left;
   padding-top: 20px;
-}
-#sponsors p {
-  font-size: 1.5em;
-  padding: 20px;
-}
-#sponsors a {
-  box-shadow: 0 -0.5em 0 rgba(78,150,226,255) inset;
-  color: #333;
-  padding: 0 10px;
-  text-decoration: none !important;
-  cursor: pointer;
-}
-#sponsors a:first-child {
-  box-shadow: 0 -0.5em 0 #db655d inset;
-}
-#faq {
-  /*background-image: url("/img/background_blue.png");*/
-  background-color: #eaeaea;
-  background-size: 300px;
-  overflow: auto;
-}
-#schedule, #sponsors {
-  background-color: #eaeaea
-}
-.faq-container-div {
-  padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-.faq-container {
-  width: 100%;
-  margin-top: 20px;
-}
-.faq-container h2 {
-  margin-top: 10px;
 }
 .btn-action {
   margin-top: 40px;
@@ -401,23 +358,6 @@ footer {
   #about p {
     padding-left: 40px;
   }
-  #schedule h2 {
-    padding-bottom: 20px;
-  }
-  #schedule .description {
-    align: right;
-    float: right;
-  }
-  #schedule .time {
-    padding-left: 40px;
-    font-size: 20px;
-  }
-  #schedule .copy {
-    padding: 60px 0 0px 0;
-    line-height: 3em;
-    width: 70%;
-    margin-left: 15%;
-  }
 
   #about .copy {
     padding: 60px 0 30px 0;
@@ -426,26 +366,9 @@ footer {
     margin-left: 15%;
   }
 
-  .faq-container {
-    width: 42.5%;
-    margin-top: 20px;
-  }
-  .faq-container-div {
-    padding:  40px 100px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
-  .faq-container h2 {
-    font-size: 1.5em;
-    cursor: pointer;
-  }
   /*.faq-container p {
     display: none;
   }*/
-  #sponsors p {
-    padding: 20px 50px 0 50px;
-  }
   nav {
     position: absolute;
     top: 0;

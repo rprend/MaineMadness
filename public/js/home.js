@@ -3,18 +3,18 @@
 
     var faqs;
 
-    $.getJSON("/data/faq.json", function(res) {
-      faqs = res;
-      var faq_container = $("<div class='faq-container-div'></div>");
-      for (var i = 0; i < faqs.length; i++) {
-        var container = $("<div class='faq-container' data-aos='fade-up'></div>");
-        var question = $("<h2></h2>").text(faqs[i].Q);
-        var answer = $("<p></p>").text(faqs[i].A);
-        container.append(question,answer);
-        faq_container.append(container);
-      }
-      $("#faq").append(faq_container);
-    });
+    // $.getJSON("/data/faq.json", function(res) {
+    //   faqs = res;
+    //   var faq_container = $("<div class='faq-container-div'></div>");
+    //   for (var i = 0; i < faqs.length; i++) {
+    //     var container = $("<div class='faq-container' data-aos='fade-up'></div>");
+    //     var question = $("<h2></h2>").text(faqs[i].Q);
+    //     var answer = $("<p></p>").text(faqs[i].A);
+    //     container.append(question,answer);
+    //     faq_container.append(container);
+    //   }
+    //   $("#faq").append(faq_container);
+    // });
 
     AOS.init({
       duration: 1000
@@ -100,31 +100,26 @@
         student_fname: $("#student_fname").val(),
         student_lname: $("#student_lname").val(),
         student_email: $("#student_email").val(),
-        student_age: $("#student_age").val(),
-        student_school: $("#student_school").val(),
-        student_grade: $("#student_grade").val(),
-        student_tshirt: $("#student_tshirt").val(),
-        student_allergies: $("#student_allergies").val(),
-        student_medical: $("#student_medical").val(),
-        contact_fname: $("#contact_fname").val(),
-        contact_lname: $("#contact_lname").val(),
-        contact_relation: $("#contact_relation").val(),
-        contact_email: $("#contact_email").val(),
-        contact_phnum: $("#contact_phnum").val(),
-        form_agreement: $("#form_agreement").val()
       };
-      $.post("/backendServices/register", formData)
-        .then(function(data) {
-          console.log(data);
-          if (data.success) {
-            swal("Success!", "Thanks for signing up! Expect a confirmation email sometime soon.", "success");
-            hideModal();
-          } else if (data.err){
-            swal("Whoops!", data.err, "error");
-          } else {
-            swal("Whoops!", "Looks like our servers aren't doing so hot. Please try again later or email info@hackridge.io", "error");
-          }
-        });
+      // if $("#student_email").val().substr(id.length - 9) != "@s207.org"{
+      //   swal("Error!", "Please use your @s207.org email!");
+      // }
+      // else{
+        $.post("/backendServices/register", formData)
+          .then(function(data) {
+            console.log(data);
+            if (data.success) {
+              swal("Success!", "Thanks for signing up! Please log in with the email you used.", "success");
+              hideModal();
+            } else if (data.err){
+              swal("Whoops!", data.err, "error");
+              hideModal();
+            } else {
+              swal("Whoops!", "Please use your school email address to sign up. If you did and are still receiving this error, email rprendergast180@s207.org", "error");
+              hideModal();
+            }
+          });
+      // }
     });
 
     $("#contact-us-btn").click(function() {

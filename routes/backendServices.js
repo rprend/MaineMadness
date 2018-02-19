@@ -42,7 +42,7 @@ module.exports = function(db) {
     //   };
     //   return smtpTransporter.sendMail(message);
     // }
-    //
+    // 
     // router.post('/testEmail', function(req, res) {
     //   sendConfirmationEmail(req.body)
     //   .then(function(info, err) {
@@ -55,25 +55,30 @@ module.exports = function(db) {
     //   });
     // });
     //
-    // router.post('/register', function(req, res) {
-    //   var attendee = new attendeeSchema(req.body);
-    //   attendee.save(function(err) {
-    //     if (err) res.send({success: false, error: err});
-    //     else {
-    //       sendConfirmationEmail({name: req.body.student_fname, email: req.body.student_email})
-    //         .then(function(info, err) {
-    //           if (err) {
-    //             var newError = new errorSchema({name: req.body.student_fname, email: req.body.student_email, error: JSON.stringify(err), date: new Date()});
-    //             newError.save(function(err1) {
-    //               if (err1) console.log(err1);
-    //             });
-    //             console.log(err);
-    //           }
-    //         });
-    //       res.send({success: true});
-    //     }
-    //   });
-    // });
+    router.post('/register', function(req, res) {
+      var attendee = new attendeeSchema(req.body);
+      if (req.body.student_email.substr(req.body.student_email.length - 9) != "@s207.org" && req.body.student_email.substr(req.body.student_email.length - 13) != "@maine207.org"){
+        res.send({success: false, email: true});
+      }
+      else{
+        attendee.save(function(err) {
+          if (err) { res.send({success: false, error: err}); }
+          else {
+            // sendConfirmationEmail({name: req.body.student_fname, email: req.body.student_email})
+            //   .then(function(info, err) {
+            //     if (err) {
+            //       var newError = new errorSchema({name: req.body.student_fname, email: req.body.student_email, error: JSON.stringify(err), date: new Date()});
+            //       newError.save(function(err1) {
+            //         if (err1) console.log(err1);
+            //       });
+            //       console.log(err);
+            //     }
+            //   });
+            res.send({success: true});
+          }
+        });
+      }
+    });
     //
     // router.post('/sendMessage', function(req, res) {
     //   var data = req.body;
