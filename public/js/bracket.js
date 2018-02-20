@@ -248,7 +248,7 @@ $(document).ready(function(){
         var tmpTxtA = $("#c" + (parseInt($(this).attr('data-col')) + 1 ) + "s" + $(this).attr('data-game')).text();
         var tmpColA = $(this).attr('data-col');
 
-
+        // (parseInt($(this).attr('data-col')) + 1 ) 
 
         $("#c" + (parseInt($(this).attr('data-col')) + 1 ) + "s" + $(this).attr('data-game')).text($(this).text());
 
