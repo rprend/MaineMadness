@@ -2,10 +2,17 @@ var ds;
 var totalEntries;
 var allData = [];
 var sheetCount = 1;
-
+var TRUEallData = [];
 $(document).ready(function(){
 
-  loadData(sheetCount);
+  $.post("/bracket",{
+    bracket: undefined
+  }, function(data,status){
+    allData = data;
+    console.log(allData);
+  });
+
+  // loadData(sheetCount);
   //POPULATE DATA FROM GOOGLE SPREADSHEET
   function loadData(which) {
 
@@ -36,7 +43,7 @@ $(document).ready(function(){
       //LOOP THRU GOOGLE DATA AND PUT INTO OBJECT
       for (var j=0; j<$len; j++) {
         var counter = ds.column("id").data[j];
-        allData[counter] = [ {
+        TRUEallData[counter] = [ {
                     myid: ds.column("id").data[j],
                     seed: ds.column("seed").data[j],
                     name: ds.column("name").data[j]
@@ -322,7 +329,8 @@ $(document).ready(function(){
       });
 
       // console.log(allData);
-      $.post("/bracket",{ bracket: allData }, function(data,status) {
+      $.post("/bracket", { bracket: allData }, function(data,status) {
+
       });
     });
 }); // end document.ready block

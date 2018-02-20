@@ -107,6 +107,14 @@ exports.updateBracket = function(newData, callback)
 	});
 }
 
+exports.getBracket = function(newData, callback)
+{
+	accounts.findOne({_id:getObjectId(newData.id)}, function(e, o){
+			if (e) callback(e);
+			else callback(o.bracket, o);
+	});
+}
+
 exports.updatePassword = function(email, newPass, callback)
 {
 	accounts.findOne({email:email}, function(e, o){

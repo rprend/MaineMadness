@@ -106,20 +106,33 @@ module.exports = function(db) {
     if (req.session.user == null){
       res.redirect('/');
     }	else{
-      AM.updateBracket({
-        id		: req.session.user._id,
-        bracket	: req.body['bracket'],
-      }, function(e, o){
-        if (e){
-          res.status(400).send('error-updating-account');
-        }	else{
-          req.session.user = o;
-          res.status(200).send('ok');
-        }
-      });
+      if(req.body['bracket'] != undefined){
+        AM.updateBracket({
+          id		: req.session.user._id,
+          bracket	: req.body['bracket']
+        }, function(e, o){
+          if (e){
+            res.status(400).send('error-updating-account');
+          }	else{
+            req.session.user = o;
+            res.status(200).send('ok');
+          }
+        });
+      }else{
+        AM.getBracket({
+          id: req.session.user._id
+        }, function(e, o){
+          if (e){
+            res.status(400).send('error-updating-account');
+          }	else{
+            req.session.user = o;
+            res.send(o);
+            res.status(200).send('ok');
+          }
+        });
+      }
     }
   });
-
 
   	app.get('/home', function(req, res) {
   		if (req.session.user == null){
