@@ -9,6 +9,8 @@ block content
 					a(href='bracket') Your Bracket
 				li
 					a(href='/home') Account
+					li
+						a(href='/standings') Standings
 				li
 					a#btn-logout(href='/')
 						| Logout
@@ -17,6 +19,10 @@ block content
 	include account
 	include modals/alert
 	include modals/confirm
+
+	footer(style='background: transparent; margin-top: 80px;')
+		p Website by Ryan Prendergast &copy 2018
+
 
 block scripts
 	script(src='/vendor/jquery-2.2.3.min.js')

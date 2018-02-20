@@ -96,6 +96,16 @@ exports.updateAccount = function(newData, callback)
 		}
 	});
 }
+exports.updateBracket = function(newData, callback)
+{
+	accounts.findOne({_id:getObjectId(newData.id)}, function(e, o){
+		o.bracket	= newData.bracket;
+			accounts.save(o, {safe: true}, function(e) {
+				if (e) callback(e);
+				else callback(null, o);
+			});
+	});
+}
 
 exports.updatePassword = function(email, newPass, callback)
 {

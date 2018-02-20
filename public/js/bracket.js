@@ -52,9 +52,9 @@ $(document).ready(function(){
       }
     }
 
-    function encodeData() {
-
-    }
+    // function encodeData() {
+    //
+    // }
 
     function showData() {
     //console.log(allData.length, ds.column("id").data.length);
@@ -233,14 +233,22 @@ $(document).ready(function(){
     }
 
     //END DATA LOADING
-
-
+  //   allData[counter] = [ {
+  //               myid: ds.column("id").data[j],
+  //               seed: ds.column("seed").data[j],
+  //               name: ds.column("name").data[j]
+  //               }];
+  // }
+  //
+//COMMENT STARTING HERE ONCE GAMES START
 	  $(".slot").click(function() {
 
       if (parseInt($(this).attr('data-col')) <= 5) {
 
         var tmpTxtA = $("#c" + (parseInt($(this).attr('data-col')) + 1 ) + "s" + $(this).attr('data-game')).text();
         var tmpColA = $(this).attr('data-col');
+
+
 
         $("#c" + (parseInt($(this).attr('data-col')) + 1 ) + "s" + $(this).attr('data-game')).text($(this).text());
 
@@ -293,7 +301,12 @@ $(document).ready(function(){
       }
     });
 
-    $("#printbtn").click(function() {
-      window.print();
+//STOP COMMENT HERE WHEN GAMES STARTING
+
+    $("#save-bracket").click(function() {
+      // window.print();
+      $.post("/bracket",{ bracket: allData }, function(data,status) {
+
+      });
     });
 }); // end document.ready block

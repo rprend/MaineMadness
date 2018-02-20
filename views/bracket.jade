@@ -9,6 +9,8 @@ html(lang='en')
     script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js')
     script(src='js/miso.ds.deps.min.0.4.1.js')
     link(href='css/bracket.css', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Poppins', rel='stylesheet')
+
   body
     nav
       #menuToggle
@@ -24,7 +26,7 @@ html(lang='en')
         | 2018 NCAA
         br
         |  Tournament Bracket
-      p#printbtn Save Bracket
+      p#save-bracket Save Bracket
     #r1.rlabel
     #r2.rlabel
     #r3.rlabel
@@ -132,8 +134,10 @@ html(lang='en')
         #c5s2.slot.c5(data-col='5', data-game='1')
     #col6
       #c6s1.slot.c6(data-col='6', data-game='1')
-      #c6s0.slot.c6.winner(data-col='6', data-game='0')
       #c6s2.slot.c6(data-col='6', data-game='2')
+    #col6-1
+      #c6s0.slot.c6-1.winner(data-col='6', data-game='0')
+      p#winner-title WINNER
     #col7
       .vlinel
         #c7s1.slot.c7(data-col='7', data-game='2')
@@ -265,4 +269,7 @@ html(lang='en')
           #c12s8.slotnohover(data-col='15', data-game='4')
         .ffcol2
           #c12s12.slotnohover
+    footer(style='background: transparent; margin-top: 80px;')
+      p Website by Ryan Prendergast &copy 2018
+
     script(src='js/bracket.js')

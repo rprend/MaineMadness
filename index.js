@@ -38,7 +38,13 @@ module.exports = function(db) {
 
   app.use('/backendServices', backendServices(db));
   // app.get('/signup', function(req,res) {res.sendFile(__dirname + '/public/signup.html'); })
-  app.get('/', function(req,res) {res.sendFile(__dirname + '/public/index.html'); })
+  app.get('/', function(req,res) {
+    if (req.session.user == null){
+      res.sendFile(__dirname + '/public/index.html');
+    }else{
+      res.render('/home');
+    }
+  })
 
   var dbURL = 'mongodb://MaineMadness:MaineMadness@ds239988.mlab.com:39988/mainemadness';
 
@@ -92,6 +98,24 @@ module.exports = function(db) {
     }	else{
       res.render('bracket', {
         udata : req.session.user
+      });
+    }
+  });
+
+  app.post('/bracket', function(req, res){
+    if (req.session.user == null){
+      res.redirect('/');
+    }	else{
+      AM.updateBracket({
+        id		: req.session.user._id,
+        bracket	: req.body['bracket'],
+      }, function(e, o){
+        if (e){
+          res.status(400).send('error-updating-account');
+        }	else{
+          req.session.user = o;
+          res.status(200).send('ok');
+        }
       });
     }
   });
@@ -153,7 +177,8 @@ module.exports = function(db) {
   			email 	: req.body['email'],
   			user 	: req.body['user'],
   			pass	: req.body['pass'],
-  			country : req.body['country']
+  			bracket: req.body['bracket'],
+        points: req.body['points']
   		}, function(e){
   			if (e){
   				res.status(400).send(e);

@@ -51,7 +51,7 @@ function AccountValidator()
 AccountValidator.prototype.showInvalidEmail = function()
 {
 	this.controlGroups[1].addClass('error');
-	this.showErrors(['That email address is already in use.','Is this a mistake? Email Ryan Prendergast at rprendergast180@s207.org to fix the issue.']);
+	this.showErrors(['That email address is taken.<br><br>','Is this a mistake? Email Ryan Prendergast at rprendergast180@s207.org to fix the issue.']);
 }
 
 AccountValidator.prototype.showInvalidUserName = function()
