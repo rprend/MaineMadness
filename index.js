@@ -127,8 +127,7 @@ module.exports = function(db) {
   			res.redirect('/');
   		}	else{
   			res.render('home', {
-  				title : 'Account: Maine Madness',
-  				countries : CT,
+  				title : 'My Account - Maine Madness',
   				udata : req.session.user
   			});
   		}

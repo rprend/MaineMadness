@@ -241,14 +241,14 @@ $(document).ready(function(){
   // }
   //
 //COMMENT STARTING HERE ONCE GAMES START
+
+
 	  $(".slot").click(function() {
 
       if (parseInt($(this).attr('data-col')) <= 5) {
 
         var tmpTxtA = $("#c" + (parseInt($(this).attr('data-col')) + 1 ) + "s" + $(this).attr('data-game')).text();
         var tmpColA = $(this).attr('data-col');
-
-        // (parseInt($(this).attr('data-col')) + 1 ) 
 
         $("#c" + (parseInt($(this).attr('data-col')) + 1 ) + "s" + $(this).attr('data-game')).text($(this).text());
 
@@ -257,6 +257,7 @@ $(document).ready(function(){
             if (text == tmpTxtA) {
               if ($(this).attr('data-col') > tmpColA && $(this).attr('data-col') <=6 ) {
                 $(this).text('');
+                $(this).id
               }
             }
         });
@@ -305,8 +306,23 @@ $(document).ready(function(){
 
     $("#save-bracket").click(function() {
       // window.print();
-      $.post("/bracket",{ bracket: allData }, function(data,status) {
+      $('.slot').each(function() {
+        var text = $(this).text();
+        text = text.substring(1);
+        var seed = parseInt(text);
+        if(!seed){
+          seed = "";
+        }
+        var name = text.split(" ").slice(1).join(" ");
+        allData[parseInt($(this).attr('b_id'))] = [ {
+                    myid: parseInt($(this).attr("b_id")),
+                    seed: String(seed),
+                    name: name
+                    }];
+      });
 
+      // console.log(allData);
+      $.post("/bracket",{ bracket: allData }, function(data,status) {
       });
     });
 }); // end document.ready block
