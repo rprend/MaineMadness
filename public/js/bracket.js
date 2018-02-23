@@ -5,11 +5,8 @@ var sheetCount = 1;
 var TRUEallData = [];
 $(document).ready(function(){
 
-  $.post("/bracket",{
-    bracket: undefined
-  }, function(data,status){
+  $.post("/bracket", { bracket: undefined }, function(data,status) {
     allData = data;
-    console.log(allData);
   });
 
   // loadData(sheetCount);
