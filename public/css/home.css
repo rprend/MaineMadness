@@ -186,10 +186,10 @@ nav a:hover {
   margin-left: calc(50% - 150px);
 }
 .logo-white {
-  background-image: url("/img/hack_ridge_logo_io_white.svg");
+  background-image: url("/img/logo.png");
 }
 .logo-black {
-  background-image: url("/img/hack_ridge_logo_io_white.svg");
+  background-image: url("/img/logo.png");
 }
 .sponsor-logos {
   display: flex;
