@@ -175,7 +175,7 @@ nav a:hover {
   min-height: 100vh;
 }
 .logo-med {
-  width: 300px;
+  width: 600px;
   height: 300px;
   background-size: 80%;
   background-position: center center;
@@ -183,13 +183,13 @@ nav a:hover {
   display: block;
   margin-bottom: 40px;
   margin-top: 40px;
-  margin-left: calc(50% - 150px);
+  margin-left: calc(50% - 250px);
 }
 .logo-white {
-  background-image: url("/img/logo.png");
+  background-image: url("/img/Logo.png");
 }
 .logo-black {
-  background-image: url("/img/logo.png");
+  background-image: url("/img/Logo.png");
 }
 .sponsor-logos {
   display: flex;
