@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-var debug = require('debug')('mainemadness:server');
+// var debug = require('debug')('mainemadness:server');
 var http  = require('http');
 var db    = require('../db'); //.js by default
 
@@ -93,5 +93,5 @@ function onListening() {
   var bind = typeof addr === 'string'
     ? 'pipe ' + addr
     : 'port ' + addr.port;
-  debug('Listening on ' + bind);
+  // debug('Listening on ' + bind);
 }
