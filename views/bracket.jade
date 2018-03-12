@@ -10,16 +10,17 @@ html(lang='en')
     script(src='js/miso.ds.deps.min.0.4.1.js')
     link(href='css/bracket.css', rel='stylesheet')
     link(href='https://fonts.googleapis.com/css?family=Poppins', rel='stylesheet')
-
+    script.
+      var bracket = !{JSON.stringify(user_bracket)}
   body
     nav
       #menuToggle
         ul
     #thetitle
       p
-        | 2018 NCAA
+        | Maine Madness
         br
-        |  Tournament Bracket
+        |  2018 NCAA Tournament Bracket
       p#save-bracket Save Bracket
     #r1.rlabel
     #r2.rlabel
@@ -89,17 +90,17 @@ html(lang='en')
         #c2s8.slot.c2(data-col='2', data-game='4', b_id='91')
       .spacer2
       .vliner
-        #c2s9.slot.c2(data-col='2', data-game='5', b_id='103')
-        #c2s10.slot.c2(data-col='2', data-game='5', b_id='104')
+        #c2s9.slot.c2(data-col='2', data-game='5', b_id='102')
+        #c2s10.slot.c2(data-col='2', data-game='5', b_id='103')
       .vliner
-        #c2s11.slot.c2(data-col='2', data-game='6', b_id='105')
-        #c2s12.slot.c2(data-col='2', data-game='6', b_id='106')
+        #c2s11.slot.c2(data-col='2', data-game='6', b_id='104')
+        #c2s12.slot.c2(data-col='2', data-game='6', b_id='105')
       .vliner
-        #c2s13.slot.c2(data-col='2', data-game='7', b_id='107')
-        #c2s14.slot.c2(data-col='2', data-game='7', b_id='108')
+        #c2s13.slot.c2(data-col='2', data-game='7', b_id='106')
+        #c2s14.slot.c2(data-col='2', data-game='7', b_id='107')
       .vliner
-        #c2s15.slot.c2(data-col='2', data-game='8', b_id='109')
-        #c2s16.slot.c2(data-col='2', data-game='8', b_id='110')
+        #c2s15.slot.c2(data-col='2', data-game='8', b_id='108')
+        #c2s16.slot.c2(data-col='2', data-game='8', b_id='109')
     #col3
       .vliner
         #c3s1.slot.c3(data-col='3', data-game='1', b_id='92')
@@ -263,7 +264,7 @@ html(lang='en')
           #c12s8.slotnohover(data-col='15', data-game='4', b_id='71')
         .ffcol2
           #c12s12.slotnohover(b_id='74')
-    footer(style='background: transparent; margin-top: 80px;')
-      p Website by Ryan Prendergast &copy 2018
+    footer(style='background: transparent; margin-top: 200px;')
+      p Maine Madness &copy 2018
 
     script(src='js/bracket.js')

@@ -69,7 +69,7 @@ module.exports = function(db) {
 				    req.session.user = o;
 					res.redirect('/home');
 				}	else{
-					res.render('login', { title: 'Hello - Please Login To Your Account' });
+					res.render('login', { title: 'MaineMadness - Login To Your Account' });
 				}
 			});
 		}
@@ -92,13 +92,31 @@ module.exports = function(db) {
   // logged-in user homepage //
 
   app.get('/bracket', function(req,res) {
+    // var bracket_data = null;
     if (req.session.user == null){
       // if user is not logged-in redirect back to login page //
       res.redirect('/');
     }	else{
-      res.render('bracket', {
-        udata : req.session.user
+      AM.getBracket({
+        id: req.session.user._id
+      }, function(e, o){
+        if (e){
+          console.log("error getting bracket");
+          console.log(e);
+          // res.status(400).send('error-getting-bracket');
+        }	else{
+          // console.log(o);
+          console.log('testing bracket');
+          console.log(o.bracket);
+          res.render('bracket', {
+            user_bracket: o.bracket,
+            user_ponts: o.points
+          });
+          // res.send(o);
+          // res.status(200).send('ok');
+        }
       });
+
     }
   });
 
@@ -108,25 +126,13 @@ module.exports = function(db) {
     }	else{
       if(req.body['bracket'] != undefined){
         AM.updateBracket({
-          id		: req.session.user._id,
+          id: req.session.user._id,
           bracket	: req.body['bracket']
         }, function(e, o){
           if (e){
             res.status(400).send('error-updating-account');
           }	else{
             req.session.user = o;
-            res.status(200).send('ok');
-          }
-        });
-      }else{
-        AM.getBracket({
-          id: req.session.user._id
-        }, function(e, o){
-          if (e){
-            res.status(400).send('error-updating-account');
-          }	else{
-            req.session.user = o;
-            res.send(o);
             res.status(200).send('ok');
           }
         });

@@ -1,6 +1,6 @@
 @media print{@page {size: landscape}}
 
-.slot, .slotnohover { width: 80px; height: 7px; padding: 1px 3px 5px 3px; border: 1px solid #eaeaea; font: 10px Arial; background-color: #f0f0f0; margin-bottom: 2px;  }
+.slot, .slotnohover { width: 90px; height: 7px; padding: 1px 3px 5px 3px; border: 1px solid #eaeaea; font: 10px Arial; background-color: #f0f0f0; margin-bottom: 2px;  }
 .slot:hover { border: 1px solid #7ebee4; cursor: pointer; }
 .c2, .c10 { margin-bottom: 23px }
 .c3, .c9 { margin-bottom: 60px }
@@ -8,8 +8,8 @@
 .c4, .c8 { margin-bottom: 130px; }
 .c5, .c7 { margin-top: 135px; }
 .c6 { text-align: center  }
-.c6 { float: left; margin-right:50px;  text-align: center  }
-.c6-1 {float:left; text-align: center  }
+.c6 { float: left; margin-right:50px; text-align: center  }
+.c6-1 {float:left; margin-left: 50px; text-align: center  }
 
 hr { color: #f00; border: 0; background-color: #ccc; height: 1px; width: 88px; margin-top: 3px; margin-bottom: 3px; }
 .spacer15 { height: 15px; }
@@ -25,21 +25,21 @@ hr { color: #f00; border: 0; background-color: #ccc; height: 1px; width: 88px; m
 #col8 { margin-right: 0px;}
 #col7 { margin-left: 12px; position: relative; }
 #col6 { margin-top: 40px; margin-left: -90px; margin-right: -100px; position: relative; top: 250px; z-index: 130; }
-#col6-1 { margin-top: 45px; margin-left: 435px; position: absolute; top: 250px }
+#col6-1 { margin-top: 0px; margin-left: 440px; position: absolute; top: 250px }
 .vliner { border-right: 1px solid #ccc; }
 .vlinel { border-left: 1px solid #ccc; }
 #vlinec { background: url('../img/vlinec.gif') repeat-y center;}
-#winner-title {font-size: 10px; font-family: Arial; font-style: bold; text-align: center; margin-top: -12px; margin-left: 23px; position: absolute}
+#winner-title {font-size: 10px; font-family: Arial; font-style: bold; text-align: center; margin-top: -12px; margin-left: 78px; position: absolute}
 
 .winner { border: 1px solid #999; }
 .winner:hover { border: 1px solid #999; cursor: auto; }
 
-#thetitle { font-size: 18px; font-style: bold; font-family: Arial; position: absolute; text-align: center; left: 405px; top: -10px; z-index: 101 }
+#thetitle { font-size: 18px; font-style: bold; font-family: Arial; position: absolute; text-align: center; left: 410px; top: -10px; z-index: 101 }
 #thetitle p.instruct { font: italic 11px Arial; color: #666; margin-top: -15px }
 #save-bracket { padding: 7px; font-family: Arial; background-color: #000; color: #fff; font-size: 12px; width: 80px; border-radius: 5px; margin-left: auto; margin-right: auto; }
 #save-bracket:hover { background-color: #666; cursor: pointer; }
 
-#firstfour { width: 885px; border-top: 1px dotted #CCC; padding-top: 5px; position: relative; z-index: 110 }
+#firstfour { width: 1100px; border-top: 1px dotted #CCC; padding-top: 5px; position: relative; z-index: 110 }
 #firstfour .title { font: bold 13px Arial; text-align: center; margin: 0 0 5px 0;}
 #firstfour .subtitle { font: 10px Arial; margin: 0 0 3px 4px; color: #999;}
 .ffmodule { float: left; border-right: 1px dotted #ccc; padding-right: 10px; margin-right: 10px; }
@@ -47,10 +47,10 @@ hr { color: #f00; border: 0; background-color: #ccc; height: 1px; width: 88px; m
 .ffcol2 { float: left; margin: 8px 0 0 5px }
 
 .rlabel { position: absolute; font: bold 13px Arial; color: #999;}
-#r1 { top: 142px; left: 215px; }
-#r2 { top: 450px; left: 215px; }
-#r3 { top: 142px; left: 700px; }
-#r4 { top: 450px; left: 700px; }
+#r1 { top: 152px; left: 250px; }
+#r2 { top: 460px; left: 250px; }
+#r3 { top: 152px; left: 800px; }
+#r4 { top: 460px; left: 800px; }
 
 #c4s1 { z-index: 200; position: relative; }
 #c4s2 { z-index: 201; position: relative; }

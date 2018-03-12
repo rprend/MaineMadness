@@ -62,10 +62,12 @@ exports.addNewAccount = function(newData, callback)
 				if (o){
 					callback('email-taken');
 				}	else{
+          newData.points = 0;
 					saltAndHash(newData.pass, function(hash){
 						newData.pass = hash;
 					// append date stamp when record was created //
 						newData.date = moment().format('MMMM Do YYYY, h:mm:ss a');
+            // newData.bracket
 						accounts.insert(newData, {safe: true}, callback);
 					});
 				}
@@ -110,8 +112,8 @@ exports.updateBracket = function(newData, callback)
 exports.getBracket = function(newData, callback)
 {
 	accounts.findOne({_id:getObjectId(newData.id)}, function(e, o){
-			if (e) callback(e);
-			else callback(o.bracket, o);
+      if (e) callback(e);
+			else callback(e, o);
 	});
 }
 
