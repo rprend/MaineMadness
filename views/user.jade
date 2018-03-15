@@ -1,0 +1,36 @@
+
+extends layout
+
+block content
+	nav
+		#menuToggle
+			ul
+				li
+					a(href='bracket') My Bracket
+				li
+					a(href='home') Home
+
+				li
+					a(href='#') Account
+					li
+						a(href='/standings') Standings
+				li
+					a#btn-logout(href='/')
+						| Logout
+			.hamburger-menu
+
+	include account
+	include modals/alert
+	include modals/confirm
+
+	footer(style='background: transparent; margin-top: 80px;')
+		p Website by Ryan Prendergast &copy 2018
+
+
+block scripts
+	script(src='/vendor/jquery-2.2.3.min.js')
+	script(src='/vendor/jquery.form.min.js')
+	script(src='/vendor/bootstrap.min.js')
+	script(src='/js/views/home.js')
+	script(src='/js/controllers/homeController.js')
+	script(src='/js/form-validators/accountValidator.js')

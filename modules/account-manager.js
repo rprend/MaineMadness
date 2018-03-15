@@ -39,6 +39,7 @@ exports.manualLogin = function(user, pass, callback)
 		if (o == null){
 			callback('user-not-found');
 		}	else{
+      console.log('User: ' + user + ' Pass: ' + pass);
 			validatePassword(pass, o.pass, function(err, res) {
 				if (res){
 					callback(null, o);

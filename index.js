@@ -42,7 +42,7 @@ module.exports = function(db) {
     if (req.session.user == null){
       res.sendFile(__dirname + '/public/index.html');
     }else{
-      res.render('/home');
+      res.render('/home', { title: 'MaineMadness - Welcome!' });
     }
   })
 
@@ -146,13 +146,34 @@ module.exports = function(db) {
   			res.redirect('/');
   		}	else{
   			res.render('home', {
+  				title : 'Maine Madness - Welcome!',
+  				udata : req.session.user
+  			});
+  		}
+  	});
+
+    app.post('/home', function(req, res){
+  		if (req.session.user == null){
+  			res.redirect('/');
+  		}	else{
+        res.redirect('/bracket');
+      }
+    });
+
+    app.get('/user', function(req, res) {
+  		if (req.session.user == null){
+  	// if user is not logged-in redirect back to login page //
+  			res.redirect('/');
+  		}	else{
+  			res.render('user', {
   				title : 'My Account - Maine Madness',
   				udata : req.session.user
   			});
   		}
   	});
 
-  	app.post('/home', function(req, res){
+
+  	app.post('/user', function(req, res){
   		if (req.session.user == null){
   			res.redirect('/');
   		}	else{
