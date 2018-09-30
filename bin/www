@@ -21,8 +21,8 @@ var app = require('../index')(db);
 
 var port = normalizePort(process.env.PORT || '2560');
 app.set('port', port);
-
 /**
+
  * Create HTTP server.
  */
 
